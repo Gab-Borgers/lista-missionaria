@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050918">
+<meta name="description" content="Chá Missionário do Elder Borges — Missão Brasil Londrina 2026–2028.">
+<title>Chá Missionário do Elder Borges</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="ceu" aria-hidden="true"></canvas>
+
+<main class="tela">
+
+  <header class="heroi">
+    <canvas id="globo" aria-hidden="true"></canvas>
+    <div class="heroi-texto">
+      <p class="eyebrow">Chá Missionário</p>
+      <h1><em>Elder</em> <span>Borges</span></h1>
+      <p class="sub">Missão Brasil Londrina · 2026–2028</p>
+    </div>
+  </header>
+
+  <section class="cartao contagem" aria-labelledby="t-contagem">
+    <h2 id="t-contagem">Tudo começa em 18 de novembro</h2>
+    <div class="relogio" role="timer" aria-live="off">
+      <div><b id="c-dias">--</b><small>dias</small></div>
+      <div><b id="c-horas">--</b><small>horas</small></div>
+      <div><b id="c-min">--</b><small>min</small></div>
+      <div><b id="c-seg">--</b><small>seg</small></div>
+    </div>
+    <p id="c-msg">Contando os dias para o início da missão.</p>
+  </section>
+
+  <section class="escolha" aria-labelledby="t-escolha">
+    <h2 class="chamada" id="t-escolha">Escolha uma opção abaixo caso sinta o desejo de contribuir</h2>
+
+    <a class="opcao" href="doacao.html">
+      <span class="icone" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 3 6l2.5 4L8 9v12h8V9l2.5 1L21 6l-5-3c-.6 1.6-2 2.5-4 2.5S8.6 4.6 8 3z"/></svg>
+      </span>
+      <span>
+        <strong>Doação</strong>
+        <span class="sub">Roupas para a missão</span>
+      </span>
+      <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+    </a>
+
+    <a class="opcao" href="pix.html">
+      <span class="icone" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 21.5 12 12 21.5 2.5 12z"/><path d="M12 8.5v7M9 12h6"/></svg>
+      </span>
+      <span>
+        <strong>Pix Missionário</strong>
+        <span class="sub">Um valor simbólico</span>
+      </span>
+      <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+    </a>
+  </section>
+
+  <section class="cartao missao" aria-labelledby="t-missao">
+    <img class="arco" src="img/elder.jpg" width="640" height="800" alt="Elder Borges ajeitando a gravata">
+    <p class="eyebrow">Para onde ele vai</p>
+    <h2 id="t-missao">Missão Brasil Londrina</h2>
+    <p class="lead">De 2026 a 2028, o Elder Borges serve na região destacada no mapa, no norte do Paraná e no oeste de São Paulo.</p>
+    <figure class="mapa">
+      <img src="img/mapa.jpg" width="640" height="709" loading="lazy" alt="Mapa da Missão Brasil Londrina, com a cidade de Londrina marcada em vermelho">
+      <figcaption>Londrina fica no marcador vermelho.</figcaption>
+    </figure>
+  </section>
+
+  <section class="cartao mural" id="mural" aria-labelledby="t-mural">
+    <div>
+      <p class="eyebrow">Mural de recados</p>
+      <h2 class="secao" id="t-mural">Deixe uma palavra</h2>
+    </div>
+    <p class="lead">Escreva uma mensagem de apoio ou uma oração para o Elder Borges.</p>
+
+    <form id="form-recado" autocomplete="off" novalidate>
+      <div class="campo">
+        <label for="r-nome">Seu nome</label>
+        <input id="r-nome" name="nome" type="text" maxlength="40" placeholder="Como você se chama?" autocomplete="given-name" required>
+      </div>
+      <div class="campo">
+        <label for="r-texto">Recado</label>
+        <textarea id="r-texto" name="texto" maxlength="280" placeholder="Escreva aqui…" required></textarea>
+        <div class="contador-texto"><span id="r-qtd">0</span>/280</div>
+      </div>
+      <button class="botao" type="submit" id="r-enviar">Publicar recado</button>
+      <p class="aviso" id="r-aviso" role="status" aria-live="polite"></p>
+    </form>
+
+    <ul class="recados" id="lista-recados" aria-live="polite">
+      <li class="vazio">Carregando os recados…</li>
+    </ul>
+  </section>
+
+  <p class="rodape">Missão Brasil Londrina · 2026–2028</p>
+</main>
+
+<script src="js/sky.js"></script>
+<script src="js/globe.js"></script>
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

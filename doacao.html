@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050918">
+<title>Doação de roupas · Elder Borges</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="ceu" aria-hidden="true"></canvas>
+
+<main class="tela">
+  <nav class="topo">
+    <a class="voltar" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+      Início
+    </a>
+  </nav>
+
+  <header class="cabeca">
+    <p class="eyebrow">Contribuição</p>
+    <h1>Lista de <span>doação</span></h1>
+  </header>
+
+  <p class="aviso-roupas">Para o propósito pessoal do Elder Borges, seria interessante se fosse feita <b>doação de roupas já usadas</b>.</p>
+
+  <ul class="itens" id="itens" aria-label="Itens para doar"></ul>
+
+  <section class="cartao fecho" aria-labelledby="t-fecho">
+    <h2 class="secao" id="t-fecho">Obrigado</h2>
+    <p class="total" id="total">Contando as doações…</p>
+    <p>Cada peça acompanha o Elder Borges ao longo da missão. Que tal deixar uma palavra de apoio no mural?</p>
+    <div class="acoes">
+      <a class="botao" href="index.html#mural">Deixar um recado</a>
+      <a class="botao vazado" href="pix.html">Contribuir com o Pix</a>
+    </div>
+  </section>
+
+  <p class="rodape">Missão Brasil Londrina · 2026–2028</p>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/sky.js"></script>
+<script type="module" src="js/doacao.js"></script>
+</body>
+</html>
