@@ -3,7 +3,7 @@ import { abrirStore } from "./store.js";
 const ITENS = [
   { id: "camisa-curta", nome: "Camisa branca de manga curta", nota: "Branca e lisa.", img: "camisa-curta.jpg" },
   { id: "camisa-longa", nome: "Camisa branca de manga longa", nota: "Branca e lisa.", img: "camisa-longa.jpg" },
-  { id: "gravata", nome: "Gravata", nota: "Tons sóbrios, como azul-marinho.", img: "gravata.jpg" },
+  { id: "gravata", nome: "Gravata", nota: "Qualquer tonalidade e tipo.", img: "gravata.jpg" },
   { id: "calca", nome: "Calça social", nota: "De qualquer cor.", img: "calca.jpg" }
 ];
 
